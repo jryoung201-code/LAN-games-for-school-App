@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tank Circuit · LAN Games for School</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/game.js" defer></script>
+</head>
+<body>
+  <header><div><span class="brand">LAN GAMES FOR SCHOOL</span><h1>Tank Circuit</h1></div><span id="connection">Ready to join</span></header>
+  <main>
+    <section id="entrance">
+      <h2>Join the arena</h2>
+      <p>Collect coins, upgrade your tank, and steal your rivals’ points.</p>
+      <form id="join-form">
+        <label for="name">Pilot name</label>
+        <input id="name" required maxlength="20" autocomplete="nickname" placeholder="Your name">
+        <button>Enter arena</button>
+      </form>
+      <p id="error" role="alert"></p>
+      <p class="hint">WASD or arrow keys to drive · Mouse to aim · Click or Space to fire</p>
+    </section>
+    <div id="game" hidden>
+      <section class="battle" aria-label="Arena">
+        <canvas id="arena" aria-label="Tank battlefield"></canvas>
+        <div id="notice" role="status" hidden></div>
+      </section>
+      <aside>
+        <div class="balance"><span>Points</span><strong id="points">0</strong></div>
+        <p class="hint">Silver +1 · Gold +5</p>
+        <h2>Upgrades</h2>
+        <div id="upgrades"></div>
+        <h2>Scoreboard</h2>
+        <ol id="scores"></ol>
+      </aside>
+      <p class="hint controls">WASD / arrows to drive · Mouse to aim · Click / Space to fire · 1–4 to upgrade</p>
+    </div>
+  </main>
+</body>
+</html>

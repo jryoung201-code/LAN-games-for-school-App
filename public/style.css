@@ -1,0 +1,38 @@
+:root{color-scheme:dark;font:16px system-ui,sans-serif;background:#0b1118;color:#eaf3f8;--mint:#69e9b3;--border:#293948;--muted:#a2b7c7}
+*{box-sizing:border-box}
+body{margin:0}
+header,main{width:min(1500px, calc(100% - 40px));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:24px 0;border-bottom:1px solid var(--border)}
+.brand{color:var(--mint);font:700 .7rem ui-monospace,monospace;letter-spacing:.16em}
+h1{margin:4px 0 0;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:-.05em}
+#connection{color:var(--mint);font-size:.82rem;text-align:right}
+main{padding:24px 0}
+#entrance{max-width:480px;margin:6vh auto 0;padding:32px;background:#111c26;border:1px solid var(--border);border-radius:16px}
+h2{margin:0 0 10px;font-size:1rem}
+#entrance h2{font-size:1.85rem;letter-spacing:-.04em}
+p{line-height:1.5}
+form{display:grid;gap:10px;margin:24px 0 8px}
+label,.hint{color:var(--muted);font-size:.85rem}
+input,button{font:inherit;border-radius:8px;padding:10px 12px;border:1px solid var(--border)}
+input{width:100%;background:#0b1118;color:inherit}
+button{background:var(--mint);color:#0b2019;font-weight:750;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid #fff;outline-offset:2px}
+button:disabled{cursor:default;opacity:.55}
+#error{color:#ff9d93}
+#game{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:14px;align-items:start}
+[hidden],#game[hidden]{display:none}
+.battle,aside{background:#111c26;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.battle{position:relative}
+canvas{width:100%;height:auto;display:block;cursor:crosshair}
+#notice{position:absolute;top:12px;left:50%;transform:translateX(-50%);max-width:92%;width:max-content;padding:8px 12px;background:#0b1118ef;border:1px solid var(--border);border-radius:8px;text-align:center;pointer-events:none}
+aside{padding:15px}
+.balance{display:flex;align-items:center;justify-content:space-between}
+#points{font-size:1.8rem;color:#f6d365}
+aside .hint{margin:0 0 18px}
+#upgrades{display:grid;gap:7px;margin-bottom:18px}
+#upgrades button{display:flex;justify-content:space-between;gap:8px;text-align:left;color:inherit;background:#1e3935;font-size:.8rem}
+#upgrades button span:last-child{color:var(--mint);white-space:nowrap}
+#scores{margin:0;padding-left:22px;font-size:.8rem}
+#scores li{padding:5px 0;overflow-wrap:anywhere}
+.controls{margin:0}
+@media(max-width:740px){#game{grid-template-columns:1fr}header,main{width:calc(100% - 20px)}}
