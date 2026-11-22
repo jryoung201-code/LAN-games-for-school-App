@@ -53,7 +53,7 @@ class HostTests(unittest.TestCase):
             try:
                 _, separator, url = host.stdout.readline().strip().partition('Host play link: ')
                 self.assertTrue(separator)
-                for path, marker in (('/', b'Tank Circuit'), ('/game.js', b'queueUpgrade'), ('/style.css', b'.battle')):
+                for path, marker in (('/', 'Tank Circuit · LAN Games'.encode()), ('/game.js', b'queueUpgrade'), ('/style.css', b'.battle')):
                     with urlopen(url + path, timeout=5) as response:
                         self.assertIn(marker, response.read())
                 states = []

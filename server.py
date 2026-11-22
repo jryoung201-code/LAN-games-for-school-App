@@ -1,4 +1,4 @@
-"""Tank Circuit's authoritative LAN game server."""
+"""LAN Games host for the Tank Circuit arena."""
 import argparse
 from dataclasses import dataclass, field
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
